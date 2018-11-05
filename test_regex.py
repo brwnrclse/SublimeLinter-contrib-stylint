@@ -2,7 +2,7 @@ import unittest
 import re
 
 regex = r'''
-    (?xi)
+    (?xim)
     (^.*$\s*)*
 
     ^
@@ -58,6 +58,18 @@ class TestRegex(unittest.TestCase):
             'warning': 'warning',
             'error': None,
             'message': 'hexidecimal color should be a variable'
+        }
+        self.match_regex_dict(str, dict)
+
+    def test_multiline_output(self):
+        str = '/path/to/file/example.styl\n\n31:10 colons error missing colon between property and value'
+        dict = {
+            'line': '31',
+            'col': '10',
+            'rule': 'colons',
+            'warning': None,
+            'error': 'error',
+            'message': 'missing colon between property and value'
         }
         self.match_regex_dict(str, dict)
 
