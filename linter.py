@@ -31,6 +31,7 @@ class Stylint(NodeLinter):
         # 177:24  warning  hexidecimal color should be a variable  colors
         # 177  warning  hexidecimal color should be a variable  colors
         ^
+        ((?P<filename>\S+)\s+)?
         (?P<line>\d+)
         :?
         (?P<col>\d+)?
