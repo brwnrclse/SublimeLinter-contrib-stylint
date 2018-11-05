@@ -1,6 +1,8 @@
-"""The base regex used to parse Stylint warnings and errors.
+"""
+The base regex used to parse Stylint warnings and errors.
 
-It is exported here for use by the linter and the tests."""
+It is exported here for use by the linter and the tests.
+"""
 
 regex = r'''
     (?xim)
