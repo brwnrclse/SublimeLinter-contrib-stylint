@@ -1,3 +1,8 @@
+"""
+This is the base regex used to parse Stylint warnings and errors. It is exported
+here for use by the linter and the tests.
+"""
+
 regex = r'''
     (?xim)
     (^.*$\s*)*
