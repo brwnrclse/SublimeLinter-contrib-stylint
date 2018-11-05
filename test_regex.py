@@ -2,7 +2,7 @@ import unittest
 import re
 
 regex = r'''
-    (?xim)
+    (?xi)
     (^.*$\s*)*
 
     ^
